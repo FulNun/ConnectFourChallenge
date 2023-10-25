@@ -1,0 +1,37 @@
+/* game board table */
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+  position: relative;
+}
+
+/* pieces are divs within game table cells: draw as colored circles */
+.piece {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: white; /* Default color for the empty slots */
+}
+
+/* Apply the colors for the players based on their color input */
+.piece.p1 {
+  background-color: var(--player-1-color, red);
+}
+
+.piece.p2 {
+  background-color: var(--player-2-color, blue);
+}
+
+/* column-top is a table row of clickable areas for each column */
+#column-top td {
+  border: dashed 1px lightgray;
+  cursor: pointer;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
